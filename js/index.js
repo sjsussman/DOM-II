@@ -77,3 +77,7 @@ paragraphs.forEach(item => {
 //     alert('you clicked a nav link!')
 // })
 // })
+
+//prevent refresh when nav is clicked
+// let nav = document.querySelector('.nav')
+// nav.addEventListener('click', event => event.preventDefault())

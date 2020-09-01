@@ -19,7 +19,7 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 
 #### Launch the project with npm
 
-* [ X Navigate to the root of the project with your command line.
+* [X] Navigate to the root of the project with your command line.
 * [X] Run `npm install` to download any dependencies listed in the `package.json` file.
 * [X] Run `npm start` to compile your project and launch a development server.
 * [X] Navigate Chrome to the URL indicated in the output of the `npm start` command.
