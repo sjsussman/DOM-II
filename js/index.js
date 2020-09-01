@@ -70,14 +70,19 @@ paragraphs.forEach(item => {
 })
 
 
-// //stop propagation
-// const navLinks = document.querySelectorAll('a')
-// navLinks.forEach(item => {
-//     item.addEventListener('click', (event) => {
-//     alert('you clicked a nav link!')
-// })
-// })
+//stop propagation
+const container = document.querySelector('.nav-container')
+container.addEventListener('click', event => alert('You just clicked the container'))
 
-//prevent refresh when nav is clicked
-// let nav = document.querySelector('.nav')
-// nav.addEventListener('click', event => event.preventDefault())
+const navLinks = document.querySelectorAll('a')
+navLinks.forEach(item => {
+    item.addEventListener('click', (event) => {
+    alert('you clicked a nav link!')
+    event.stopPropagation();
+})
+})
+
+// prevent refresh when nav is clicked
+let nav = document.querySelectorAll('a')
+console.log(nav)
+nav.forEach(item => item.addEventListener('click', event => event.preventDefault()))
