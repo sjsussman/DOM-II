@@ -7,8 +7,12 @@ Array.from(blocks.children).forEach(item => {
   //HELPER FUNCTIONS
   //function to move blocks to the top
   const top = () => blocks.prepend(item);
+
   //function to move blocks to the right
   const rocket = () => (item.style.transform = 'translateX(1000%)');
+  //allow block to go off screen ("infinite")
+  document.querySelector('html').style.overflowX = 'hidden';
+
   //resets blocks to position
   const reset = () => (item.style.transform = '');
 
@@ -25,5 +29,4 @@ Array.from(blocks.children).forEach(item => {
   item.addEventListener('click', event => top());
 });
 
-//allow block to go off screen ("infinite")
-document.querySelector('html').style.overflowX = 'hidden';
+
