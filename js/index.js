@@ -1,5 +1,8 @@
 // Your code goes here
 
+//Set an alert on page load
+window.addEventListener('load', event => (alert('WELCOME TO THE FUN ZONE')));
+
 //change h1 color on mouse over
 let header = document.querySelector('h1');
 header.addEventListener('mouseenter', ()=>
@@ -40,8 +43,6 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-
-
 //add script to alert when image is moved
 const imgs = document.querySelectorAll('img')
 imgs.forEach(img => {
@@ -54,11 +55,25 @@ window.addEventListener('resize', (event) =>{
     });
 
 
-//Create an alert when there is a selection change
-document.addEventListener('selectionchange', (event) => {
-    alert('What was wrong with me!?'); 
-    event.stopPropagation();
+// Create an alert when the mouse leaves the last image
+const lastImg = document.querySelectorAll('img')
+lastImg[3].addEventListener('mouseleave', (event) => {
+    alert('Come on! Book a boat ride!'); 
     });
 
+//alert when someone tries to copy a paragraph
+const paragraphs = document.querySelectorAll('p')
+paragraphs.forEach(item => {
+    item.addEventListener('copy', (event) => {
+    alert('Please do not try to copy me!')
+})
+})
 
-    //propagation?
+
+// //stop propagation
+// const navLinks = document.querySelectorAll('a')
+// navLinks.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//     alert('you clicked a nav link!')
+// })
+// })
