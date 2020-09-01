@@ -7,7 +7,7 @@ window.addEventListener('load', event => (alert('WELCOME TO THE FUN ZONE')));
 let header = document.querySelector('h1');
 header.addEventListener('mouseenter', ()=>
 {
-    header.style.color = 'red'
+header.style.color = 'red'
 });
 
 //bus image enlarged on click
